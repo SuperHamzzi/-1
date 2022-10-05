@@ -1,0 +1,25 @@
+package Chapter1;
+
+import java.util.Scanner;
+
+public class Exam5 {
+	
+	
+	
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		String a =sc.next();
+		char[] b = a.toCharArray();
+		int lt = 0, rt=a.length();
+		while(lt>rt) {
+			char tmp = b[lt];
+			b[lt]=b[rt];
+			b[rt]=tmp;
+			lt++;
+			rt--;
+		}
+		String hi = String.valueOf(b);
+		System.out.println(hi);
+	}
+
+}
