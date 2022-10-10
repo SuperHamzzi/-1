@@ -17,14 +17,17 @@ public class exam8 {
 		for(int i=0; i<N; i++) {
 			int count = 1;
 			for(int j=0; j<N; j++) {
-					if(arr[i]<arr[j]){
+					if(arr[j]>arr[i]){
 						count++;
 					}
 					
 			}
 			arr[i] = count;
 		}
-		System.out.println(Arrays.toString(arr));
+		for(int i=0;i<arr.length;i++) {
+			System.out.print(arr[i]+" ");
+		}
+		
 	}
 	
 }

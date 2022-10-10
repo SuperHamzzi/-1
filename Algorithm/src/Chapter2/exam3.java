@@ -36,4 +36,4 @@ public class exam3 {
 				
 	}
 
-}
+
