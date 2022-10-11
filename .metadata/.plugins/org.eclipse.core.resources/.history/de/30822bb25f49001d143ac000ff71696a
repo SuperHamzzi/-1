@@ -1,0 +1,42 @@
+package Chapter3;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+	private ArrayList<Integer> soultion(int n, int m, int[] arr, int[] arr2) {
+		ArrayList<Integer> answer = new ArrayList<>();
+		int a = 0,b =0; //a와 b로 1개씩 증가하며 값비교
+		while(a<n && b<m) {
+			if(arr[a]<arr[b]) answer.add(arr[a++]);
+			else answer.add(arr[b++]);
+		}
+		while(a<n) answer.add(arr[a++]);
+		while(b<m) answer.add(arr[b++]);
+		return answer;
+	}
+		
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		Main T = new Main();
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int [] arr = new int[N];
+		int M = sc.nextInt();
+		int [] arr2 = new int[M];
+		System.out.println(T.soultion(N,M,arr,arr2)+" ");
+		
+		 
+		
+		
+	}
+
+
+
+	
+
+}
