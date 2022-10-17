@@ -19,10 +19,10 @@ public class ex4 {
 		for(int i =0; i<ch2.length-1;i++) {
 			hm.put(ch[i],hm.getOrDefault(ch[i], 0)+1);
 		}
-		for(int rt=ch.length-1; rt<ch.length; rt++) {
+		for(int rt=ch2.length-1; rt<ch.length; rt++) {
 			hm.put(ch[rt], hm.getOrDefault(ch[rt], 0)+1);
 			if(hm.equals(hm2)) answer++;
-			hm.put(ch[lt], hm.getOrDefault(ch[lt], 0)-1);
+			hm.put(ch[lt], hm.get(ch[rt])-1);
 			if(hm.get(ch[lt])==0) hm.remove(ch[lt]);
 			lt++;
 		}
